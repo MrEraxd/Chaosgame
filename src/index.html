@@ -3,9 +3,21 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
     <title>Starter</title>
   </head>
   <body>
+    <div id="root">
+      <div id="control-panel">
+        <h2>CHAOS GAME</h2>
+        Time to wait between jumps in ms: <input type="number" id="speed" value="0">
+      </div>
+
+      <svg id="screen" oncontextmenu="return false;">
+      </svg>
+    </div>
+
     <script src="index.js"></script>
   </body>
 </html>
