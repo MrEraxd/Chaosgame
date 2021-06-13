@@ -1,0 +1,282 @@
+/* RADIO */
+.radio_container {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+    padding-left: 28px;
+}
+
+.radio_container input{
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.radio_container .checkmark{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #1c1c1c;
+    border: 2px solid #7A7A7A;
+    border-radius: 50%;
+}
+
+.radio_container:hover input ~ .checkmark {
+    border: 2px solid #9A9A9A;
+}
+
+.radio_container .checkmark:after{
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.radio_container input:checked ~ .checkmark:after{
+    display: block;
+}
+
+.radio_container .checkmark:after{
+    top: 2px;
+    left: 2px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: white;
+    border: 1px solid #7A7A7A;
+}
+
+/* Text/Password */
+input[type="text"], input[type="password"]{
+    background-color: #1c1c1c;
+    border: 2px solid #7A7A7A;
+    padding: 6px;
+    color: white;
+    display: inline-block;
+}
+
+input:focus{
+    outline: none;
+}
+
+input:hover{
+    border-color: #9A9A9A;
+}
+
+input::placeholder{
+    color: #9A9A9A;
+}
+
+input[type="text"].error, input[type="password"].error{
+    border-color: #e53935;
+}
+
+label.input-label{
+    color: #FFF;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+/* Drop down */
+.select_container {
+    position: relative;
+    display: inline-block;
+    user-select: none;
+}
+
+.select_container select{
+    display: none;
+}
+
+/* Main box */
+.select-selected {
+    background-color: #2E2E2E;
+    border: 2px solid #3D3D3D;
+    font-size: 13px;
+}
+
+.select-selected:hover{
+    border-color: #4D4D4D;
+}
+
+/* Closed arrow */
+.select-selected:after {
+    position: absolute;
+    content: "";
+    top: 10px;
+    right: 10px;
+    width: 6px;
+    height: 6px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+/* Opened arrow */
+.select-selected.select-arrow-active:after{
+    transform: rotate(225deg);
+    top: 14px;
+}
+
+/* style the item_icon (options), including the selected item: */
+.select-item div,.select-selected {
+    color: #FFFFFF;
+    padding: 6px 6px;
+    cursor: pointer;
+}
+
+/* Style options */
+.select-item {
+    position: absolute;
+    background-color: #2E2E2E;
+    border: 2px solid #3D3D3D;
+    border-top: none;
+    font-size: 13px;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 99;
+}
+
+/* Hide the item_icon when the select box is closed: */
+.select-hide {
+    display: none;
+}
+
+/* Hover */
+.select-item div:hover, .same-as-selected {
+    background-color: #434343;
+}
+
+/* Checkbox */
+.checkbox-container{
+    display: block;
+    position: relative;
+    padding-left: 26px;
+    height: 20px;
+    cursor: pointer;
+    user-select: none;
+    margin-bottom: 12px;
+}
+
+.checkbox-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkbox-container .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #1C1C1C;
+    border: 2px solid #7A7A7A;
+}
+
+.checkmark:hover{
+    border-color: #9A9A9A;
+}
+
+.checkbox-container .checkmark:after{
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.checkbox-container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.checkbox-container .checkmark:after {
+    left: 5px;
+    top: 1px;
+    width: 4px;
+    height: 9px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+/* Button */
+button{
+    background-color: #2E2E2E;
+    border: none;
+    outline: none;
+    padding: 8px 32px;
+    color: white;
+    text-transform: uppercase;
+}
+
+button:hover{
+    cursor: pointer;
+    background-color: #434343;
+}
+
+button:active{
+    background-color: #3d3d3d;
+}
+
+button.blue{
+    background-color: #1565C0;
+}
+
+button.blue:hover{
+    background-color: #1871D7;
+}
+
+button.blue:active{
+    background-color: #1259A9;
+}
+
+button.red{
+    background-color: #B80101;
+}
+
+button.red:hover{
+    background-color: #F70101;
+}
+
+button.red:active{
+    background-color: #AB0101;
+}
+
+button.green{
+    background-color: #4caf50;
+}
+
+button.green:hover{
+    background-color: #66bb6a;
+}
+
+button.green:active{
+    background-color: #43a047;
+}
+
+/* Scrollbar */
+/* width */
+::-webkit-scrollbar {
+    width: 3px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background-color: #2E2E2E;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #7A7A7A;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #9A9A9A;
+}
