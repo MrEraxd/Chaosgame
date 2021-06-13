@@ -21,6 +21,11 @@ module.exports = {
         from: "src/*.html",
         to: "",
         flatten: true
+      },
+      {
+        from: "src/libs/*.js",
+        to: "libs/",
+        flatten: true
       }
     ])
   ],
